@@ -104,124 +104,149 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
 
-```sql
--- Paste your SQL code below for Question 1
+```
+ALTER TABLE employee ADD first_name varchar(50);
+ALTER TABLE employee ADD last_name varchar(50);
 ```
 
 **Output:**
+<img width="935" height="232" alt="image" src="https://github.com/user-attachments/assets/5eaec147-beaa-4f3e-89bc-9509a837e884" />
 
-![Output1](output.png)
 
 **Question 2**
----
--- Paste Question 2 here
 
-```sql
--- Paste your SQL code below for Question 2
+```
+CREATE TABLE Shipments(
+ShipmentID INTEGER primary key,
+ShipmentDate DATE,
+SupplierID INTEGER, 
+OrderID INTEGER,
+foreign key  (SupplierID) REFERENCES Suppliers(SupplierID),
+foreign key (OrderID) REFERENCES Orders(OrderID)
+);
 ```
 
 **Output:**
+<img width="932" height="223" alt="image" src="https://github.com/user-attachments/assets/f482a92d-cf79-45b2-a178-d85fc01cebac" />
 
-![Output2](output.png)
 
 **Question 3**
----
--- Paste Question 3 here
 
-```sql
--- Paste your SQL code below for Question 3
+```
+INSERT INTO Student_details(RollNo,Name,Gender,Subject,MARKS)
+select RollNo,Name,Gender,Subject,MARKS
+from Archived_students;
 ```
 
 **Output:**
+<img width="932" height="262" alt="image" src="https://github.com/user-attachments/assets/767d0e11-5f02-498c-b5d0-c7d5d0635278" />
 
-![Output3](output.png)
 
 **Question 4**
----
--- Paste Question 4 here
 
-```sql
--- Paste your SQL code below for Question 4
+```
+INSERT INTO Customers (CustomerID, Name, Address)
+VALUES (306, 'Diana Prince', 'Themyscira');
+INSERT INTO Customers (CustomerID, Name, Address, City, ZipCode)
+VALUES (307, 'Bruce Wayne', 'Wayne Mano', 'Gotham', '10007');
+INSERT INTO Customers (CustomerID, Name, Address, ZipCode)
+VALUES (308, 'Peter Parker', 'Queens', '11375');
 ```
 
 **Output:**
+<img width="932" height="265" alt="image" src="https://github.com/user-attachments/assets/905e152b-38d3-4b70-a832-b1db188fa1da" />
 
-![Output4](output.png)
 
 **Question 5**
----
--- Paste Question 5 here
 
-```sql
--- Paste your SQL code below for Question 5
 ```
+ALTER TABLE customer ADD discount DECIMAL(5,2);
+```
+
 
 **Output:**
 
-![Output5](output.png)
+<img width="935" height="325" alt="image" src="https://github.com/user-attachments/assets/cdcaafcd-09a6-4183-a582-423ac9ef3300" />
+
 
 **Question 6**
----
--- Paste Question 6 here
 
-```sql
--- Paste your SQL code below for Question 6
+```
+CREATE TABLE contacts(
+contact_id INTEGER primary key,
+first_name TEXT not NULL,
+last_name TEXT not NULL,
+email TEXT,
+phone TEXT not NULL CHECK (LENGTH (PHONE) >= 10)
+);
 ```
 
 **Output:**
+<img width="931" height="307" alt="image" src="https://github.com/user-attachments/assets/30bebb06-6b98-4e05-8134-a1a193ac3540" />
 
-![Output6](output.png)
 
 **Question 7**
----
--- Paste Question 7 here
 
-```sql
--- Paste your SQL code below for Question 7
+```
+INSERT INTO Student_details(RollNo,Name, Gender)
+VALUES (204,'Samuel Black' ,'M');
 ```
 
 **Output:**
 
-![Output7](output.png)
+<img width="931" height="295" alt="image" src="https://github.com/user-attachments/assets/3bde2f76-e245-4f78-83d7-b867d244b2de" />
+
 
 **Question 8**
----
--- Paste Question 8 here
 
-```sql
--- Paste your SQL code below for Question 8
+```
+CREATE TABLE Invoices(
+InvoiceID INTEGER primary key,
+InvoiceDate DATE,
+Amount REAL CHECK (Amount>0),
+DueDate DATE CHECK (DueDate > InvoiceDate),
+OrderID INTEGER,
+foreign key (OrderID) references Orders(OrderID)
+);
 ```
 
 **Output:**
+<img width="840" height="241" alt="image" src="https://github.com/user-attachments/assets/00c53b3d-8561-464b-acca-79c2b8161ca5" />
 
-![Output8](output.png)
 
 **Question 9**
----
--- Paste Question 9 here
 
-```sql
--- Paste your SQL code below for Question 9
 ```
-
+CREATE TABLE products(
+product_id INTEGER primary key,
+product_name TEXT not NULL,
+list_price DECIMAL (10, 2) not NULL,
+discount DECIMAL (10, 2) DEFAULT 0 NOT NULL,
+CHECK (list_price  >= discount AND discount >=0 AND list_price >=0)
+);
+```
 **Output:**
 
-![Output9](output.png)
+
+<img width="840" height="223" alt="Screenshot 2026-09-21 132120" src="https://github.com/user-attachments/assets/2be05721-8737-4c74-afbc-9b174e013b6b" />
+
 
 **Question 10**
----
--- Paste Question 10 here
 
-```sql
--- Paste your SQL code below for Question 10
+```
+CREATE TABLE Customers(
+CustomerID INTEGER,
+Name TEXT,
+Email TEXT,
+JoinDate DATETIME
+);
 ```
 
 **Output:**
 
-![Output10](output.png)
+<img width="836" height="290" alt="image" src="https://github.com/user-attachments/assets/dc1bde82-eea3-4986-a415-175c54ad911a" />
+
 
 
 ## RESULT
