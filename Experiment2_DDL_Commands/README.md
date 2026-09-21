@@ -105,6 +105,8 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 
+Write an SQL query to add two new columns, first_name and last_name, to the table employee. Both columns should have a data type of varchar(50).
+
 ```
 ALTER TABLE employee ADD first_name varchar(50);
 ALTER TABLE employee ADD last_name varchar(50);
@@ -115,6 +117,9 @@ ALTER TABLE employee ADD last_name varchar(50);
 
 
 **Question 2**
+
+Create a table named Shipments with the following constraints: ShipmentID as INTEGER should be the primary key. ShipmentDate as DATE. SupplierID as INTEGER should be a foreign key referencing Suppliers(SupplierID). OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
+
 
 ```
 CREATE TABLE Shipments(
@@ -133,6 +138,12 @@ foreign key (OrderID) REFERENCES Orders(OrderID)
 
 **Question 3**
 
+Insert all students from Archived_students table into the Student_details table.
+
+cid name type notnull dflt_value pk
+
+0 RollNo INT 0 1 1 Name VARCHAR(100) 0 0 2 Gender VARCHAR(10) 0 0 3 Subject VARCHAR(50) 0 0 4 MARKS INT 0 0
+
 ```
 INSERT INTO Student_details(RollNo,Name,Gender,Subject,MARKS)
 select RollNo,Name,Gender,Subject,MARKS
@@ -144,6 +155,12 @@ from Archived_students;
 
 
 **Question 4**
+
+In the Cusomers table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
+
+CustomerID Name Address City ZipCode
+
+306 Diana Prince Themyscira 307 Bruce Wayne Wayne Manor Gotham 10007 308 Peter Parker Queens 11375
 
 ```
 INSERT INTO Customers (CustomerID, Name, Address)
@@ -160,6 +177,12 @@ VALUES (308, 'Peter Parker', 'Queens', '11375');
 
 **Question 5**
 
+Write a SQL query to Add a new column named "discount" with the data type DECIMAL(5,2) to the "customer" table.
+
+Sample table: customer
+
+customer_id | cust_name | city | grade | salesman_id -------------+----------------+------------+-------+------------- 3002 | Nick Rimando | New York | 100 | 5001 3007 | Brad Davis | New York | 200 | 5001 3005 | Graham Zusi | California | 200 | 5002
+
 ```
 ALTER TABLE customer ADD discount DECIMAL(5,2);
 ```
@@ -171,6 +194,8 @@ ALTER TABLE customer ADD discount DECIMAL(5,2);
 
 
 **Question 6**
+
+Create a new table named contacts with the following specifications: contact_id as INTEGER and primary key. first_name as TEXT and not NULL. last_name as TEXT and not NULL. email as TEXT. phone as TEXT and not NULL with a check constraint to ensure the length of phone is at least 10 characters.
 
 ```
 CREATE TABLE contacts(
@@ -188,6 +213,15 @@ phone TEXT not NULL CHECK (LENGTH (PHONE) >= 10)
 
 **Question 7**
 
+Insert the below data into the Student_details table, allowing the Subject and MARKS columns to take their default values.
+
+RollNo Name Gender
+
+204 Samuel Black M
+
+Note: The Subject and MARKS columns will use their default values.
+
+
 ```
 INSERT INTO Student_details(RollNo,Name, Gender)
 VALUES (204,'Samuel Black' ,'M');
@@ -199,6 +233,8 @@ VALUES (204,'Samuel Black' ,'M');
 
 
 **Question 8**
+
+Create a table named Invoices with the following constraints: InvoiceID as INTEGER should be the primary key. InvoiceDate as DATE. Amount as REAL should be greater than 0. DueDate as DATE should be greater than the InvoiceDate. OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
 
 ```
 CREATE TABLE Invoices(
@@ -217,6 +253,8 @@ foreign key (OrderID) references Orders(OrderID)
 
 **Question 9**
 
+Create a new table named products with the following specifications: product_id as INTEGER and primary key. product_name as TEXT and not NULL. list_price as DECIMAL (10, 2) and not NULL. discount as DECIMAL (10, 2) with a default value of 0 and not NULL. A CHECK constraint at the table level to ensure: list_price is greater than or equal to discount discount is greater than or equal to 0 list_price is greater than or equal to 0
+
 ```
 CREATE TABLE products(
 product_id INTEGER primary key,
@@ -233,6 +271,10 @@ CHECK (list_price  >= discount AND discount >=0 AND list_price >=0)
 
 
 **Question 10**
+
+Create a table named Customers with the following columns:
+
+CustomerID as INTEGER Name as TEXT Email as TEXT JoinDate as DATETIME
 
 ```
 CREATE TABLE Customers(
