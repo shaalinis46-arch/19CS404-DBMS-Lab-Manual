@@ -22,33 +22,24 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 - Payments tracked for memberships and sessions.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+
+<img width="932" height="547" alt="image" src="https://github.com/user-attachments/assets/a4e0ab7d-0506-4ea5-bca2-cfb2e6b7e15d" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="938" height="553" alt="image" src="https://github.com/user-attachments/assets/e37ba0f1-b72d-49cd-bf8c-daad582aebc0" />
+
+
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="932" height="577" alt="image" src="https://github.com/user-attachments/assets/99b5c63c-601c-4b43-adc5-7dc1be9cd718" />
+
 
 ### Assumptions
-- 
-- 
-- 
 
----
+Every trainer can teach one or more programs. Members may join multiple fitness programs. Attendance is recorded for every session Payments are made only by registered members.
 
 # Scenario B: City Library Event & Book Lending System
 
@@ -64,33 +55,24 @@ The Central Library wants to manage book lending and cultural events.
 - Overdue fines apply for late returns.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+
+<img width="837" height="465" alt="image" src="https://github.com/user-attachments/assets/94426701-9df1-41dd-be2a-157aa5ff627e" />
+
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="840" height="328" alt="image" src="https://github.com/user-attachments/assets/814da702-a2f4-4d47-ba80-2a8e96fb7007" />
+
+
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="837" height="347" alt="image" src="https://github.com/user-attachments/assets/a4b5fd43-1199-4ddf-9a7c-ddac5fbfa315" />
+
 
 ### Assumptions
-- 
-- 
-- 
 
----
+Only registered members can borrow books. Members may register for multiple events. Every event has at least one speaker. A book can be borrowed many times at different periods.
 
 # Scenario C: Restaurant Table Reservation & Ordering
 
@@ -106,33 +88,23 @@ A popular restaurant wants to manage reservations, orders, and billing.
 - Waiters assigned to serve reservations.
 
 ### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+
+<img width="830" height="465" alt="image" src="https://github.com/user-attachments/assets/7421fe86-c234-49b7-baf6-87accb7b76d2" />
 
 ### Entities and Attributes
 
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
+<img width="842" height="357" alt="image" src="https://github.com/user-attachments/assets/f84b1c87-c9fd-4961-ac34-319b81f37c6c" />
+
 
 ### Relationships and Constraints
 
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
+<img width="837" height="335" alt="image" src="https://github.com/user-attachments/assets/9141b60e-70b3-41fa-bd0f-cad9aba44f02" />
+
 
 ### Assumptions
-- 
-- 
-- 
 
----
+Only customers can make reservations. Every reservation is served by one waiter Multiple dishes can be included in a single order.
+
 
 ## Instructions for Students
 
